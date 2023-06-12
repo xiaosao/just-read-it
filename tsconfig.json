@@ -19,7 +19,6 @@
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true,
-    "types": ["./node_modules/chrome-types"]
   },
   "include": ["src"],
   "references": [{ "path": "./tsconfig.node.json" }],
