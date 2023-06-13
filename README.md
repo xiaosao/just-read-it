@@ -1,5 +1,3 @@
-
-
 ```
 <url-pattern> := <scheme>://<host><path>
 <scheme> := '*' | 'http' | 'https' | 'file' | 'ftp' | 'urn'
@@ -7,13 +5,13 @@
 <path> := '/' <any chars>
 ```
 
-
 Paths inside the manifest are relative to the Vite project root, so the location of the manifest file doesn't matter.
 
 - 双击出现浮球
 - 鼠标滑动选择后出现浮球
 - 点击鼠标右键可以出现
 - 是否需要进行配置
+- 数据统计及可视化
 
 browser.contextMenus
 browser.contextMenus.ContextType 判断在哪些上下文可以出现菜单
@@ -27,3 +25,12 @@ inflate config, deflate config
 chrome.contextMenus.onClicked.addListener
 
 pako 有什么用
+
+```
+// contexts 参数表示在哪些上下文中可以出现
+bro.contextMenus.create({
+    title: title,
+    contexts: [context],
+    id: context,
+});
+```

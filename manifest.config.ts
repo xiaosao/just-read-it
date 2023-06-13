@@ -16,7 +16,7 @@ export default defineManifest(async (env) => ({
   version: `${major}.${minor}.${patch}.${label}`,
   // semver is OK in "version_name"
   version_name: version,
-  permissions: ["contextMenus"],
+  permissions: ["contextMenus","alarms"],
   icons: {
     "16": "src/assets/images/icon-16.png",
     "48": "src/assets/images/icon-48.png",
@@ -25,10 +25,11 @@ export default defineManifest(async (env) => ({
     type: "module",
     service_worker: "src/background/index.ts",
   },
-  content_scripts: [
-    {
-      js: ["src/content/index.tsx"],
-      matches: ["https://*/*"],
-    },
-  ],
+  action: {},
+  // content_scripts: [
+  //   {
+  //     js: ["src/content/index.tsx"],
+  //     matches: ["https://*/*"],
+  //   },
+  // ],
 }));
